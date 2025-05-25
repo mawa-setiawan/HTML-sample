@@ -1,56 +1,37 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio Ilustrasi</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f8f8f8;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #ffd54f;
-      color: #333;
-    }
-    h1 {
-      margin: 0;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Portofolio Ilustrasi</h1>
-    <p>Selamat datang di galeri karyaku</p>
-  </header>
-
-  <main class="gallery">
-    <img src="gambar/ilustrasi1.jpg" alt="Ilustrasi 1">
-    <img src="gambar/ilustrasi2.png" alt="Ilustrasi 2">
-    <img src="gambar/ilustrasi3.jpg" alt="Ilustrasi 3">
-    <!-- Tambahkan gambar baru di sini -->
-  </main>
-
-</body>
-</html>
+<style>
+  body {
+    font-family: sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #ffd54f;
+    color: #333;
+  }
+  h1 {
+    margin: 0;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex-grow: 1;
+    max-height: 400px; /* Biar nggak terlalu tinggi */
+    object-fit: contain;
+  }
+  .gallery-item {
+    flex: 1 1 300px;
+    max-width: 100%;
+  }
+</style>
